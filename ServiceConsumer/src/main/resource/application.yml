@@ -1,0 +1,39 @@
+server:
+  port: 11001
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.33.152:8848
+
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/html,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+
+ribbon:
+  okhttp:
+      enabled: true
+  ReadTimeout: 10000
+  ConnecTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  OkToRetruOnAllOperations: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+          strategy: SEMAPHORE
+

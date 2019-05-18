@@ -1,0 +1,56 @@
+##server:
+##  port: 8090
+#
+#spring:
+#  cloud:
+#    sentinel:
+#      transport:
+##        port: 8719
+#        dashboard: 192.168.33.152:9999
+#
+#      datasource:
+#        ds1: #流控规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: ${spring.applicaltion.name}-flow-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: flow
+#        ds2: #降级规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: ${spring.applicaltion.name}-degrade-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: degrade
+#        ds3: #热点规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: ${spring.applicaltion.name}-param-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: param
+#        ds4: #系统规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: ${spring.applicaltion.name}-system-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: system
+#        ds5: #授权规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: ${spring.applicaltion.name}-authority-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: authority
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: /*
+#
+#
+#test:
+#  name: nxs

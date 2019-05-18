@@ -1,0 +1,64 @@
+#server:
+#  port: 12001
+#
+#spring:
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.33.182:3306/blog?useUnicode=true&characterEncoding=UTF8
+#    username: root
+#    password: root
+#    dbcp2:
+#      min-idle: 5
+#      initial-size: 5
+#      max-total: 20
+#      max-wait-millis: 20000
+#  cloud:
+#    sentinel:
+#      transport:
+##        port: 8791
+#        dashboard: localhost:9999
+#
+#      datasource:
+#        ds1: #流控规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: sentinel-client-flow-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: flow
+#        ds2: #降级规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: sentinel-client-degrade-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: degrade
+#        ds3: #热点规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: sentinel-client-param-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: param
+#        ds4: #系统规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: sentinel-client-system-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: system
+#        ds5: #授权规则
+#          nacos:
+#            server-addr: 192.168.33.152:8848
+#            dataId: sentinel-client-authority-rules
+#            groupId: SENTINEL_GROUP
+#            data-type: json
+#            rule-type: authority
+#
+#mybatis:
+##  config-location: classpath:mybatis/mybatis.cfg.xml
+#  mapper-locations: classpath:mybatis/mapper/*.xml
+#
+#test:
+#  name: nxs
